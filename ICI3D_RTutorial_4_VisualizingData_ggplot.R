@@ -391,7 +391,7 @@ ggplot(hookworm, aes(epg))+geom_histogram()
 
 
 ## That's rather ugly and doesn't show us much about the data.  This
-## is because the bins are extremeley big so we don't see much
+## is because the bins are extremely big so we don't see much
 ## variability.  If we make the bins smaller we'll see more
 ## information. The way to do this is to set the breaks between
 ## bins. To divide the data into "pretty" bins we can use the pretty
