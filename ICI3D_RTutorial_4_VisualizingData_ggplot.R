@@ -26,7 +26,7 @@ getwd() # shows you what directory you are currently in
 ## Define a variable "path" that gives the file path to the directory
 ## where the data are stored.
 
-path <- "~/Dropbox/Mentorship/MMED/visualizingData" # Replace the question marks with a character string telling R
+#path <- ?? # Replace the question marks with a character string telling R
 # where to look for the data
 
 ## and you can replace it with where you have saved the data set.
@@ -80,7 +80,7 @@ ggplot(bots.dat, aes(y=prevHIV, x=year))+
 
 ggplot(bots.dat, aes(y=prevHIV, x=year))+
   geom_col(fill="red")+
-  theme_bw()+
+  theme_bw()+ ##remove this or change this to theme_void(), theme_classic() to see the differences
   labs(x="Year", y="% HIV+",   # label the x and y axis
        title="HIV Prevalence in Botswana, 1990-2007") # give the graph a title
 
@@ -94,8 +94,8 @@ ggplot(bots.dat, aes(y=prevHIV, x=year))+
 
 
 head(bots.dat1)
-bots.dat1$variable<-
-  bots.dat1$value<- bots.dat1$value*100 ## change the proportion to percentage
+
+bots.dat1$value<- bots.dat1$value*100 ## change the proportion to percentage
 
 ggplot(bots.dat1, aes(x=year, y=value, fill=variable))+geom_col()+
   theme_bw()+ ## change this to theme_void(), theme_classic() to see the differences
